@@ -13,15 +13,15 @@ class Home extends PolymerElement {
       </style>
 
       <div class="card border-solid border-4 border-gray-600">
-        <div class="circle">1</div>
         <h1>Home</h1>
-        <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
-        <p class="text-xl">
-          Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit
-          elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi
-          periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo
-          eripuit sit.
-        </p>
+
+        <ul>
+          <li>Colors</li>
+          <li>Mocs</li>
+          <li>Parts</li>
+          <li>Sets</li>
+          <li>Themes</li>
+        </ul>
       </div>
     `;
   }

@@ -41,7 +41,17 @@ class MyApp extends PolymerElement {
 
         app-header {
           color: #fff;
-          background-color: var(--app-primary-color);
+          background: #ff4b1f; /* fallback for old browsers */
+          background: -webkit-linear-gradient(
+            to right,
+            #ff9068,
+            #ff4b1f
+          ); /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(
+            to right,
+            #ff9068,
+            #ff4b1f
+          ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         }
 
         app-header paper-icon-button {
@@ -88,8 +98,11 @@ class MyApp extends PolymerElement {
             role="navigation"
           >
             <a name="home" href="[[rootPath]]home">Home</a>
-            <a name="view2" href="[[rootPath]]view2">View Two</a>
-            <a name="view3" href="[[rootPath]]view3">View Three</a>
+            <a name="colors" href="[[rootPath]]colors">Colors</a>
+            <a name="mocs" href="[[rootPath]]mocs">Mocs</a>
+            <a name="parts" href="[[rootPath]]parts">Mocs</a>
+            <a name="sets" href="[[rootPath]]sets">Mocs</a>
+            <a name="themes" href="[[rootPath]]themes">Mocs</a>
           </iron-selector>
         </app-drawer>
 
@@ -107,9 +120,12 @@ class MyApp extends PolymerElement {
 
           <iron-pages selected="[[page]]" attr-for-selected="name" role="main">
             <app-home name="home"></app-home>
-            <my-view2 name="view2"></my-view2>
-            <my-view3 name="view3"></my-view3>
-            <my-view404 name="view404"></my-view404>
+            <app-colors name="colors"></app-colors>
+            <app-mocs name="mocs"></app-mocs>
+            <app-parts name="parts"></app-parts>
+            <app-sets name="sets"></app-sets>
+            <app-themes name="themes"></app-themes>
+            <app-404 name="404"></app-404>
           </iron-pages>
         </app-header-layout>
       </app-drawer-layout>
@@ -139,10 +155,10 @@ class MyApp extends PolymerElement {
     // Show 'view1' in that case. And if the page doesn't exist, show 'view404'.
     if (!page) {
       this.page = "home";
-    } else if (["home", "view2", "view3"].indexOf(page) !== -1) {
+    } else if (["home", "colors", "mocs"].indexOf(page) !== -1) {
       this.page = page;
     } else {
-      this.page = "view404";
+      this.page = "404";
     }
 
     // Close a non-persistent drawer when the page & route are changed.
@@ -160,14 +176,14 @@ class MyApp extends PolymerElement {
       case "home":
         import("./views/home.js");
         break;
-      case "view2":
-        import("./views/my-view2.js");
+      case "colors":
+        import("./views/colors.js");
         break;
-      case "view3":
-        import("./views/my-view3.js");
+      case "mocs":
+        import("./views/mocs.js");
         break;
-      case "view404":
-        import("./views/my-view404.js");
+      case "404":
+        import("./views/404.js");
         break;
     }
   }

@@ -1,7 +1,7 @@
 import { PolymerElement, html } from "@polymer/polymer/polymer-element.js";
 import "../shared-styles.js";
 
-class MyView3 extends PolymerElement {
+class Mocs extends PolymerElement {
   static get template() {
     return html`
       <style include="shared-styles">
@@ -14,7 +14,7 @@ class MyView3 extends PolymerElement {
 
       <div class="card">
         <div class="circle">3</div>
-        <h1>View Three</h1>
+        <h1>Mocs</h1>
         <p>Modus commodo minimum eum te, vero utinam assueverit per eu.</p>
         <p>
           Ea duis bonorum nec, falli paulo aliquid ei eum.Has at minim mucius
@@ -26,4 +26,4 @@ class MyView3 extends PolymerElement {
   }
 }
 
-window.customElements.define("my-view3", MyView3);
+window.customElements.define("app-mocs", Mocs);
