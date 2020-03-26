@@ -14,14 +14,6 @@ class Home extends PolymerElement {
 
       <div class="card border-solid border-4 border-gray-600">
         <h1>Home</h1>
-
-        <ul>
-          <li>Colors</li>
-          <li>Mocs</li>
-          <li>Parts</li>
-          <li>Sets</li>
-          <li>Themes</li>
-        </ul>
       </div>
     `;
   }

@@ -1,20 +1,23 @@
-import axios from "axios";
+import { axios } from "@bundled-es-modules/axios";
 
 axios.defaults.baseURL = "https://rebrickable.com/api/v3/";
-axios.defaults.headers.common["Authorization"] = process.env.API_KEY;
+const key = "b9e14b7ca27b2f434cc7b5129a831e0a";
 
 const Brickable = {};
 
+// COLORS
 Brickable.getColors = params => {
   return axios
     .get("lego/colors", {
       params: {
+        key: key,
         ...params
       }
     })
     .then(res => {
-      console.log(res);
-      return res;
+      return res.data.results;
     });
 };
+
+//
 export default Brickable;

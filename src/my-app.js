@@ -100,9 +100,9 @@ class MyApp extends PolymerElement {
             <a name="home" href="[[rootPath]]home">Home</a>
             <a name="colors" href="[[rootPath]]colors">Colors</a>
             <a name="mocs" href="[[rootPath]]mocs">Mocs</a>
-            <a name="parts" href="[[rootPath]]parts">Mocs</a>
-            <a name="sets" href="[[rootPath]]sets">Mocs</a>
-            <a name="themes" href="[[rootPath]]themes">Mocs</a>
+            <a name="parts" href="[[rootPath]]parts">Parts</a>
+            <a name="sets" href="[[rootPath]]sets">Sets</a>
+            <a name="themes" href="[[rootPath]]themes">Themes</a>
           </iron-selector>
         </app-drawer>
 
